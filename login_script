@@ -1,0 +1,6 @@
+# profile_name = hr_poc
+saml2aws login --idp-account=hr-poc
+export AWS_PROFILE=hr-poc
+export ACCOUNT_ID=$(aws sts get-caller-identity --query Account | tr -d '"')
+export AWS_REGION=$(aws configure get region)
+aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 968645129546.dkr.ecr.us-west-2.amazonaws.com

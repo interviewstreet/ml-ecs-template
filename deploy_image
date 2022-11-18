@@ -1,0 +1,2 @@
+docker build . --platform linux/amd64 -t 968645129546.dkr.ecr.us-west-2.amazonaws.com/jd-ner-model
+docker push 968645129546.dkr.ecr.us-west-2.amazonaws.com/jd-ner-model:latest
